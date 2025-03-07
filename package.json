@@ -21,7 +21,7 @@
     "build-redirect-config": "npx babel-node scripts/buildRedirectConfig.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "predeploy": "npm run build",
+    "predeploy": "npm run prod",
     "deploy": "gh-pages -d public"
   },
   "author": "",
