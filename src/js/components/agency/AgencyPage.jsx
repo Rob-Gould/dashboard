@@ -17,6 +17,7 @@ import { getStickyBreakPointForSidebar } from 'helpers/stickyHeaderHelper';
 import { mediumScreen } from 'dataMapping/shared/mobileBreakpoints';
 
 import AgencySection from './AgencySection';
+import AgencyOverview from './overview/AgencyOverview';
 import StatusOfFunds from './statusOfFunds/StatusOfFunds';
 import PageWrapper from '../sharedComponents/PageWrapper';
 import NumericPickerWrapper from '../sharedComponents/dropdowns/NumericPickerWrapper';
@@ -56,7 +57,7 @@ export const AgencyProfileV2 = ({
     const [isMobile, setIsMobile] = useState(window.innerWidth < mediumScreen);
 
     const dataThroughDates = useSelector((state) => state.agency.dataThroughDates);
-    // const overviewDataThroughDate = dataThroughDates?.overviewDataThroughDate;
+    const overviewDataThroughDate = dataThroughDates?.overviewDataThroughDate;
     const statusDataThroughDate = dataThroughDates?.statusDataThroughDate;
     // const awardSpendingDataThroughDate = dataThroughDates?.awardSpendingDataThroughDate;
 
@@ -68,13 +69,13 @@ export const AgencyProfileV2 = ({
     };
 
     const sections = [
-        // {
-        //     section: 'overview',
-        //     label: 'Overview',
-        //     icon: 'landmark',
-        //     dataThroughDate: overviewDataThroughDate,
-        //     component: <AgencyOverview fy={selectedFy} dataThroughDate={overviewDataThroughDate} />
-        // },
+        {
+            section: 'overview',
+            label: 'Overview',
+            icon: 'landmark',
+            dataThroughDate: overviewDataThroughDate,
+            component: <AgencyOverview fy={selectedFy} dataThroughDate={overviewDataThroughDate} />
+        },
         {
             section: 'status-of-funds',
             label: 'Status of Funds',
