@@ -76,6 +76,6 @@ db.sql
 .lighthouseci/
 
 # local settings
-/src/js/LocalConstants.js
-*/LocalConstants.js
+# /src/js/LocalConstants.js
+# */LocalConstants.js
 
