@@ -133,7 +133,7 @@
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (o.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
-    (o.p = "/"),
+    (o.p = "/dashboard/"),
     (() => {
       if ("undefined" != typeof document) {
         var e = (e) =>
